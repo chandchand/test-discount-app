@@ -19,6 +19,8 @@ nextApp.prepare().then(() => {
 
   const discount = require("./routes/voucherRoute");
 
+  app.use(express.json());
+
   app.use("/api/discount", discount);
 
   // Serve the Next.js app for other routes
